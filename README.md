@@ -23,6 +23,17 @@ This MU-Plugin is a modified version based on the [richardtape/subdir-loader.php
 composer require dark-kitt/wordpress-mu-plugin-autoloader
 ```
 
+If you have a specific path to your MU-Plugin directory, please add the following lines to your composer.json file.
+```json
+"extra": {
+  "installer-paths": {
+    "path/to/mu-plugins/{$name}/": [
+      "type:wordpress-muplugin"
+    ]
+  },
+  "wordpress-install-dir": "path/to/wordpress"
+},
+```
 Note, for a specific commit of your VCS Repo `"require": { "vendor/repo_name": "dev-main#eec8698" }` (branch#commit).
 
 **common composer cmds**
