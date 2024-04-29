@@ -1,11 +1,14 @@
 # **WordPress MU-Plugin Autoloader**
+
+Project: [Part 1](https://github.com/dark-kitt/wordpress-boilerplate/tree/main), [**Part 2**](https://github.com/dark-kitt/wordpress-theme-configuration), [Part 3](https://github.com/dark-kitt/wordpress-theme-vue)
+
 ---
 
 ## Introduction
 
 This WordPress MU-Plugin loads MU-Plugins from **subdirectories**. WordPress only looks for PHP files right inside the MU-Plugins directory, and not for files in subdirectories (unlike for normal plugins).
 
-After **composer update** copy the ***mu-plugin-autoloader.php*** file inside of the MU-Plugins directory (*`/mu-plugins`*), to load WordPress MU-Plugins automatically.
+After installing the package, copy the ***mu-plugin-autoloader.php*** file inside of the MU-Plugins directory (*`/mu-plugins`*), to load WordPress MU-Plugins automatically.
 
 This MU-Plugin is a modified version based on the [richardtape/subdir-loader.php](https://gist.github.com/richardtape/05c70849e949a5017147) Github Gist.
 
@@ -16,33 +19,23 @@ This MU-Plugin is a modified version based on the [richardtape/subdir-loader.php
 
 ## Installation
 
-Edit your composer.json file and insert the following lines to install the **WordPress MU-Plugin Autoloader**. Run **composer update** and copy the ***mu-plugin-autoloader.php*** file inside of the MU-Plugins directory (*`web/app/mu-plugins`*).
-```json
-...
-"repositories": [{
-        "type": "vcs",
-        "url": "#"
-    }
-]
-...
-"require": {
-    "dark-kitt/wordpress-mu-plugin-autoloader": "dev-main"
-}
-...
+```shell
+composer require dark-kitt/wordpress-mu-plugin-autoloader
 ```
-
-* copy the code inside of **composer.json**
-* run **composer update**
 
 Note, for a specific commit of your VCS Repo `"require": { "vendor/repo_name": "dev-main#eec8698" }` (branch#commit).
 
-**composer cmds**
-```text
+**common composer cmds**
+
+```shell
 composer install
 composer update
+# package control
+composer require verdor/package
+composer remove verdor/package
 
 composer clear-cache
-composer show -i (installed packages)
+composer show -i # installed packages
 ```
 
 ---
