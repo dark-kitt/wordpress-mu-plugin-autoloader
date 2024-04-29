@@ -1,4 +1,12 @@
 {
-    "name": "dark-kitt/wordpress-mu-plugin-autoloader",
-    "type": "wordpress-muplugin" 
+  "name": "dark-kitt/wordpress-mu-plugin-autoloader",
+  "description": "This WordPress MU-Plugin loads MU-Plugins from subdirectories",
+  "type": "wordpress-muplugin",
+  "license": "CC-BY-4.0",
+  "authors": [
+    {
+      "name": "dark-kitt"
+    }
+  ],
+  "minimum-stability": "dev"
 }
